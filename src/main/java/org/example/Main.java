@@ -2,7 +2,11 @@ package org.example;
 
 public class Main {
     static void main(String[] args) {
-        Calc calculator = new Calc();
-        calculator.summ(1, 10);
+        Calc calculatorSumm = new Calc();
+        calculatorSumm.summ(1, 10);
+
+        Calc calculatorSub = new Calc();
+        calculatorSub.sub(15,8);
     }
+
 }
