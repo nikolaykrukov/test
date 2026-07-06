@@ -5,7 +5,7 @@ public class Calc {
     public int summ(int a, int b){
         int result;
         result = a + b;
-        System.out.println("Сумма " + a + " и " + b + " равно " + result);
+        System.out.println(a + " + " + b + " = " + result);
         return result;
     }
 }
