@@ -22,31 +22,24 @@ class CalcTest {
 //        System.out.println("After each");
 //    }
 
-    @Test
-    @DisplayName("Проверка суммирования 1")
-    @Timeout(10)
-    void summ1() {
-        Calc calc = new Calc();
-        int result = calc.summ(1,6);
-        Assertions.assertEquals(7,result, "Не тот ответ");
-    }
-
-    @Test
-    @DisplayName("Проверка суммирования 2")
-    @Timeout(10)
-    void summ2() {
-        Calc calc = new Calc();
-        int result = calc.summ(1,6);
-        Assertions.assertEquals(7,result, "Не тот ответ");
-    }
 
     @ParameterizedTest(name = "#{index} - сложение {0} и {1}, ожидаем {2}")
-    @CsvSource({"1, 2, 3", "-1, 2, 1", "0, 0, 0"})
-    @DisplayName("Проверка суммирования 3")
+    @CsvSource({"10, 2, 12", "-5, 25, 20"})
+    @DisplayName("Проверка суммирования 1")
     @Tag("param")
-    void summ3(int a, int b, int expectedResult) {
+    void summ(int a, int b, int expectedResult) {
         Calc calc = new Calc();
         int result = calc.summ(a,b);
+        Assertions.assertEquals(expectedResult,result, "Не тот ответ");
+    }
+
+    @ParameterizedTest(name = "#{index} - вычитание {0} и {1}, ожидаем {2}")
+    @CsvSource({"10, 3, 7", "17, 15, 2"})
+    @DisplayName("Проверка вычитания 1")
+    @Tag("param")
+    void sub(int a, int b, int expectedResult) {
+        Calc calc = new Calc();
+        int result = calc.sub(a,b);
         Assertions.assertEquals(expectedResult,result, "Не тот ответ");
     }
 }
