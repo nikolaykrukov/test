@@ -14,7 +14,7 @@ class CalcTest {
     void summ(int a, int b, int expectedResult) {
         Calc calc = new Calc();
         int result = calc.summ(a, b);
-        Assertions.assertEquals(expectedResult, result, "Не тот ответ");
+        Assertions.assertEquals(expectedResult, result, "Сложение неверно");
     }
 
     @ParameterizedTest(name = "№{index} - вычитание {0} и {1}, ожидаем {2}")
@@ -24,6 +24,6 @@ class CalcTest {
     void Minus(int a, int b, int expectedResult) {
         Calc calc = new Calc();
         int result = calc.Minus(a, b);
-        Assertions.assertEquals(expectedResult, result, "Не тот ответ");
+        Assertions.assertEquals(expectedResult, result, "Вычитание неверное");
     }
 }
