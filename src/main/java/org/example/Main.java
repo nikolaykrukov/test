@@ -5,8 +5,8 @@ public class Main {
         Calc calculatorSumm = new Calc();
         calculatorSumm.summ(1, 10);
 
-        Calc calculatorSub = new Calc();
-        calculatorSub.Minus(15, 8);
+        Calc calculatorMinus = new Calc();
+        calculatorMinus.Minus(15, 8);
     }
 
 }
