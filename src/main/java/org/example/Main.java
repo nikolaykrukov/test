@@ -6,7 +6,7 @@ public class Main {
         calculatorSumm.summ(1, 10);
 
         Calc calculatorSub = new Calc();
-        calculatorSub.sub(15,8);
+        calculatorSub.Minus(15, 8);
     }
 
 }
