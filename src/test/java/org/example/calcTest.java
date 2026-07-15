@@ -5,23 +5,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 class CalcTest {
-//    @BeforeAll
-//    public static void setUp(){
-//        System.out.println("Before all");
-//    }
-//    @BeforeEach
-//    public void setUpEach(){
-//        System.out.println("Before each");
-//    }
-//    @AfterAll
-//    public static void afterAll(){
-//        System.out.println("After all");
-//    }
-//    @AfterEach
-//    public void afterEach(){
-//        System.out.println("After each");
-//    }
-
 
     @ParameterizedTest(name = "№{index} - сложение {0} и {1}, ожидаем {2}")
     @CsvSource({"10, 2, 12", "-5, 25, 20"})
